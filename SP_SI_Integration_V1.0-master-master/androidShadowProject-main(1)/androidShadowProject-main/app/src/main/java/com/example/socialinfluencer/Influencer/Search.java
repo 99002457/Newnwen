@@ -31,18 +31,20 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class Search extends Fragment {
-    private List<String> CampID;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     String s;
+    private List<String> CampID;
     SearchCampaignsAdapter adapter;
+    RecyclerView Campaigns;
+    private List<Campaign_Data_Model> listData;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    RecyclerView Campaigns;
-    private List<Campaign_Data_Model> listData;
+
     public Search() {
         // Required empty public constructor
     }
@@ -72,7 +74,7 @@ public class Search extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        searchCategory("");
+
 
 
     }
@@ -102,15 +104,17 @@ public class Search extends Fragment {
                 return false;
             }
         });
-        DatabaseReference CamapignsRef = FirebaseDatabase.getInstance().getReference("Campaigns");
-        Query CampaignsQuery = CamapignsRef.orderByKey();
-        Campaigns.setLayoutManager(new LinearLayoutManager(getContext()));
-        customAdapter adapter = new customAdapter(listData,  CampID,getContext());
-        Campaigns.setAdapter(adapter);
+        searchProcess("");
+//        DatabaseReference CamapignsRef = FirebaseDatabase.getInstance().getReference("Campaigns");
+//        Query CampaignsQuery = CamapignsRef.orderByKey();
+//        Campaigns.setLayoutManager(new LinearLayoutManager(getContext()));
+//        customAdapter adapter = new customAdapter(listData,  CampID,getContext());
+//        Campaigns.setAdapter(adapter);
 
     }
     public void searchProcess(String s)
     {
+
         DatabaseReference CamapignsRef = FirebaseDatabase.getInstance().getReference("Campaigns");
         Query CampaignsQuery = CamapignsRef.orderByChild("Campaign_Name").startAt(s).endAt(s+"\uff8f");
         Campaigns.setLayoutManager(new LinearLayoutManager(getContext()));

@@ -53,6 +53,7 @@ public class customAdapter extends RecyclerView.Adapter<customAdapter.MyViewHold
     }
 
 
+
 //    public customAdapter(ArrayList<String> cTitle, ArrayList<String> cDescription, ArrayList<String> cCategory, ArrayList<String> cDate, Integer[] arr, Context context) {
 //        this.cTitle = cTitle;
 //        this.cDescription = cDescription;

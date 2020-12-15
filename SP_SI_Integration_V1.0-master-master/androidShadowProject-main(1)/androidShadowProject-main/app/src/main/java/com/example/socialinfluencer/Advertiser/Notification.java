@@ -2,7 +2,11 @@ package com.example.socialinfluencer.Advertiser;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,17 +14,33 @@ import android.view.ViewGroup;
 
 import com.example.socialinfluencer.R;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+//import static com.example.notificationadvertiser.ItemClass.card;
+//import static com.example.notificationadvertiser.ItemClass.card1;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link Notification#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class Notification extends Fragment {
+    ArrayList<String> name= new ArrayList<>(Arrays.asList("Campaign Application", "Campaign Application","Campaign Application","Campaign Application","Campaign Application","Campaign Application"));
+    ArrayList<String> influencer= new ArrayList<>(Arrays.asList("Clay","Ankitha","Girish","Sudarshana","Chethan","Thrinath"));
+    ArrayList<String> campaign= new ArrayList<>(Arrays.asList("Sports Zone","Cannie Crew","Good Looks","Wood Bling","Creative Tree","Magic Brush"));
+    ArrayList<String> price= new ArrayList<>(Arrays.asList("44331","43422","55444","33793","27949","72223"));
+    ArrayList<String> time= new ArrayList<>(Arrays.asList("9","7","3","4","10","15"));
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    ArrayList<String> namE= new ArrayList<>(Arrays.asList("Campaign Acceptance", "Campaign Acceptance","Campaign Acceptance","Campaign Acceptance","Campaign Acceptance","Campaign Acceptance"));
+    ArrayList<String> influenceR= new ArrayList<>(Arrays.asList("Clay","Ankitha","Girish","Sudarshana","Chethan","Thrinath"));
+    ArrayList<String> campaigN= new ArrayList<>(Arrays.asList("Cannie Crew","Good Looks","Wood Bling","Sports Zone","Creative Tree","Magic Brush"));
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -28,6 +48,36 @@ public class Notification extends Fragment {
 
     public Notification() {
         // Required empty public constructor
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        RecyclerView campaignList = view.findViewById(R.id.recyclerView);
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager((getContext()));
+        linearLayoutManager.setAutoMeasureEnabled(true);
+        campaignList.setLayoutManager(linearLayoutManager);
+        campaignList.setNestedScrollingEnabled(false);
+
+        List<ItemClass> itemClassList = new ArrayList<>();
+
+        //itemClassList.add(new ItemClass(card,"Campaign Acceptance"));
+        //itemClassList.add(new ItemClass(card1, "Campaign Application"));
+        itemClassList.add(new ItemClass(ItemClass.card,name,influencer,campaign,price,time));
+        itemClassList.add(new ItemClass(ItemClass.card1,namE,influenceR,campaigN));
+        itemClassList.add(new ItemClass(ItemClass.card1,namE,influenceR,campaigN));
+        itemClassList.add(new ItemClass(ItemClass.card1,namE,influenceR,campaigN));
+        itemClassList.add(new ItemClass(ItemClass.card,name,influencer,campaign,price,time));
+
+        CustomNotificationAdapter customeAdapter =new CustomNotificationAdapter(itemClassList);
+        campaignList.setAdapter(customeAdapter);
+
+       CustomNotificationAdapter adapterClass
+                = new CustomNotificationAdapter(itemClassList);
+
+//        customAdapter adapter
+//                = new  customAdapter(itemClassList);
+        campaignList.setAdapter(adapterClass);
     }
 
     /**

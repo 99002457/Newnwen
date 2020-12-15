@@ -1,4 +1,4 @@
-package com.example.socialinfluencer.Influencer;
+package com.example.socialinfluencer.Advertiser;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,22 +18,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.socialinfluencer.Campaign.campaign;
+import com.example.socialinfluencer.Campaign.campaign1;
 import com.example.socialinfluencer.DataModels.Campaign_Data_Model;
 import com.example.socialinfluencer.DataModels.InfluencerCampaigns;
 import com.example.socialinfluencer.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
-public class AdapterProfileCampaigns extends RecyclerView.Adapter<AdapterProfileCampaigns.MyViewHolder>{
+public class AdapterAProfileCampaigns extends RecyclerView.Adapter<AdapterAProfileCampaigns.MyViewHolder>{
 
 //    ArrayList<String> cTitle;
 //    ArrayList<String> cDescription;
@@ -48,7 +40,7 @@ public class AdapterProfileCampaigns extends RecyclerView.Adapter<AdapterProfile
 
     private List<Campaign_Data_Model> details;
 
-    public AdapterProfileCampaigns(Context context, List<String> campaignID, List<InfluencerCampaigns> campaigns, List<Campaign_Data_Model> details) {
+    public AdapterAProfileCampaigns(Context context, List<String> campaignID, List<InfluencerCampaigns> campaigns, List<Campaign_Data_Model> details) {
         this.context = context;
         this.CampaignID = campaignID;
         this.campaignsStatus = campaigns;
@@ -66,8 +58,8 @@ public class AdapterProfileCampaigns extends RecyclerView.Adapter<AdapterProfile
 
     @NonNull
     @Override
-    public AdapterProfileCampaigns.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.cardprofile,parent,false);
+    public AdapterAProfileCampaigns.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.cardprofileadvertiser,parent,false);
         MyViewHolder vh= new MyViewHolder(v);
         return vh;
     }
@@ -91,17 +83,16 @@ public class AdapterProfileCampaigns extends RecyclerView.Adapter<AdapterProfile
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                Fragment campaign = new campaign();
+                Fragment campaign = new campaign1();
                 Bundle bundle = new Bundle();
                 bundle.putString("CampaignID", CampaignID.get(position));
                 campaign.setArguments(bundle);
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame, campaign).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack(campaign.toString()).commit();
-
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame, campaign).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("Campagin ID").commit();
 
             }
         });
-        TextView status= holder.status;
-        status.setText(icd.getStatus());
+//        TextView status= holder.status;
+//        status.setText(icd.getStatus());
 
         ImageView himage = holder.image;
         Glide.with(context)
@@ -112,11 +103,13 @@ public class AdapterProfileCampaigns extends RecyclerView.Adapter<AdapterProfile
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                Fragment campaign = new campaign();
+                Fragment campaign = new campaign1();
                 Bundle bundle = new Bundle();
                 bundle.putString("CampaignID", CampaignID.get(position));
                 campaign.setArguments(bundle);
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame, campaign).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack(campaign.toString()).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame, campaign).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("Campagin ID").commit();
+
+
             }
         });
 
@@ -196,7 +189,6 @@ public class AdapterProfileCampaigns extends RecyclerView.Adapter<AdapterProfile
             title=(TextView) v.findViewById(R.id.title);
             description=(TextView) v.findViewById(R.id.descrpt);
             cat=(TextView) v.findViewById(R.id.cat);
-            status=(TextView) v.findViewById(R.id.status) ;
             knwMore=(Button) v.findViewById(R.id.knw);
             image=(ImageView)v.findViewById(R.id.image);
             card=(CardView)v.findViewById(R.id.card);

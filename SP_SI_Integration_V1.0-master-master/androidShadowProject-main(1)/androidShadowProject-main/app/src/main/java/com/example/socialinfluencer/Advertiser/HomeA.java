@@ -16,9 +16,7 @@ import android.view.View;
 
 
 import com.example.socialinfluencer.MainActivity;
-import com.example.socialinfluencer.Advertiser.Profile;
-import com.example.socialinfluencer.Advertiser.Profile;
-import com.example.socialinfluencer.Advertiser.Profile;
+
 import com.example.socialinfluencer.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
