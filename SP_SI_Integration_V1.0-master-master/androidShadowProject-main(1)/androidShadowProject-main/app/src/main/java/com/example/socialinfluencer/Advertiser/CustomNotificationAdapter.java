@@ -34,7 +34,7 @@ public class CustomNotificationAdapter extends RecyclerView.Adapter {
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         switch (viewType) {
             case card:
                 View layoutOne
@@ -59,18 +59,18 @@ public class CustomNotificationAdapter extends RecyclerView.Adapter {
         switch (itemClassList.get(position).getViewType()) {
             case ItemClass.card:
                 String aname = itemClassList.get(position).getaName().get(card1Position);
-                String aCampaign = itemClassList.get(position).getaCampaign().get(card1Position);
+               // String aCampaign = itemClassList.get(position).getaCampaign().get(card1Position);
                 String aInfluencer = itemClassList.get(position).getaInfluencer().get(card1Position);
                 String aPrice = itemClassList.get(position).getaPrice().get(card1Position);
                 String aTime = itemClassList.get(position).getaTime().get(card1Position);
-                ((cardViewHolder)holder).setViews(aname,aCampaign,aInfluencer,aPrice,aTime);
+               ((cardViewHolder)holder).setViews(aname,aInfluencer,aPrice,aTime);
                 card1Position+=1;
                 break;
             case card1:
                 String bname = itemClassList.get(position).getbName().get(card2Position);
-               String bCampaign = itemClassList.get(position).getbCampaign().get(card2Position);
+            //   String bCampaign = itemClassList.get(position).getbCampaign().get(card2Position);
                String bInfluencer = itemClassList.get(position).getbInfluencer().get(card2Position);
-                ((card1ViewHolder)holder).setViews(bname,bCampaign,bInfluencer);
+                ((card1ViewHolder)holder).setViews(bname,bInfluencer);
                 card2Position+=1;
                 break;
         }
@@ -115,10 +115,10 @@ public class CustomNotificationAdapter extends RecyclerView.Adapter {
             card = (CardView) v.findViewById(R.id.card);
         }
 
-        private void setViews(String cName, String cInfluencer, String cCampaign, String cPrice, String cTime) {
+        private void setViews(String cName, String cInfluencer, String cPrice, String cTime) {
             name.setText((CharSequence) cName);
             influencer.setText((CharSequence) cInfluencer);
-            campaign.setText((CharSequence) cCampaign);
+          //  campaign.setText((CharSequence) cCampaign);
             price.setText((CharSequence) cPrice);
             time.setText((CharSequence) cTime);
 
@@ -140,10 +140,10 @@ public class CustomNotificationAdapter extends RecyclerView.Adapter {
             card1 = (CardView) v.findViewById(R.id.card);
         }
 
-        private void setViews(String dName, String dInfluencer, String dCampaign) {
+        private void setViews(String dName, String dInfluencer) {
             namE.setText((CharSequence) dName);
             influenceR.setText((CharSequence) dInfluencer);
-            campaigN.setText((CharSequence) dCampaign);
+           // campaigN.setText((CharSequence) dCampaign);
         }
     }
 
