@@ -13,11 +13,11 @@
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="135dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         app:cardBackgroundColor="#DCFDFFFF"
         app:cardCornerRadius="8dp"
         app:cardElevation="3dp">
@@ -36,6 +36,7 @@
                 android:gravity="center"
                 android:text="Notification Name"
                 android:textColor="#000000"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -83,7 +84,7 @@
 
                 <Button
                     android:id="@+id/accept"
-                    android:layout_width="60dp"
+                    android:layout_width="80dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
@@ -91,7 +92,6 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="4dp"
-                    android:layout_weight="1"
                     android:background="#1d2b4e"
                     android:text="Accept"
                     android:textColor="#FFFFFF"
@@ -128,7 +128,7 @@
 
                 <Button
                     android:id="@+id/reject"
-                    android:layout_width="60dp"
+                    android:layout_width="80dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
@@ -136,7 +136,6 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
                     android:background="#1d2b4e"
                     android:text="Reject"
                     android:textColor="#FFFFFF"

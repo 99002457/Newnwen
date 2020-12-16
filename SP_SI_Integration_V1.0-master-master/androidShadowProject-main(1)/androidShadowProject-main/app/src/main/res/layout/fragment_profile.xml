@@ -44,7 +44,7 @@
                         android:layout_marginRight="148dp"
                         android:text="Name:"
                         android:textColor="#FFFFFF"
-                        android:textSize="15sp"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -103,17 +103,16 @@
                         android:id="@+id/u_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
                         android:text="Name"
                         android:textColor="#FFFFFF"
-                        android:textSize="12sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/u_gender"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="14dp"
                         android:text="Gender"
                         android:textColor="#FFFFFF" />
 
@@ -121,28 +120,28 @@
                         android:id="@+id/u_category"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="13dp"
                         android:text="Category"
                         android:textColor="#FFFFFF"
-                        android:textSize="12sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/u_price"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="14dp"
+                        android:layout_marginTop="11dp"
                         android:text="Price"
                         android:textColor="#FFFFFF"
-                        android:textSize="12sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/u_totalearning"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="36dp"
+                        android:layout_marginTop="10dp"
                         android:text="Earning"
                         android:textColor="#FFFFFF"
-                        android:textSize="12sp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -175,7 +174,11 @@
             android:id="@+id/insta_cardd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
             android:background="#FFFFFF">
 
             <androidx.cardview.widget.CardView
@@ -346,7 +349,11 @@
             android:id="@+id/insta_card"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp">
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -524,7 +531,11 @@
             android:id="@+id/Insta_card"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp">
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -710,6 +721,8 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
             android:layout_marginBottom="65dp"
             android:background="#1d2b4e" />
 

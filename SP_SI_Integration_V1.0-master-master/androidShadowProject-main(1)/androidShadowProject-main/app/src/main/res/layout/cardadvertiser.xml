@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
+        android:background="#DCFDFFFF"
         app:cardBackgroundColor="#DCFDFFFF"
         app:cardCornerRadius="8dp"
         app:cardElevation="3dp">
@@ -302,8 +303,7 @@
                                 android:textColor="#FFFFFF"
                                 android:textSize="11sp"
                                 android:textStyle="bold"
-                                app:backgroundTint="@color/colorPrimaryDarks"
-                                />
+                                app:backgroundTint="@color/colorPrimaryDarks" />
 
                             <Button
                                 android:id="@+id/request"
@@ -316,8 +316,8 @@
                                 android:layout_marginRight="4dp"
                                 android:layout_marginBottom="2dp"
                                 android:layout_weight="1"
-                                android:textColor="#FFFFFF"
                                 android:text="Request"
+                                android:textColor="#FFFFFF"
                                 android:textSize="11sp"
                                 android:textStyle="bold"
                                 app:backgroundTint="@color/colorPrimaryDarks" />

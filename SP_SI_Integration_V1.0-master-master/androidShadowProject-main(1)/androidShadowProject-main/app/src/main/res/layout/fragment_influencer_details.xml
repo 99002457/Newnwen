@@ -30,16 +30,17 @@
                     android:layout_height="244dp"
                     android:layout_marginStart="25dp"
                     android:layout_marginLeft="25dp"
+                    android:layout_marginTop="-18dp"
                     android:src="@drawable/pic" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="5dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
                     android:background="#DCFDFFFF"
                     android:orientation="horizontal">
 
@@ -77,7 +78,7 @@
                             android:layout_weight="1"
                             android:text="Name"
                             android:textColor="#000000"
-                            android:textSize="18sp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -102,6 +103,7 @@
                                 android:layout_marginBottom="2dp"
                                 android:text="Categories:"
                                 android:textColor="#000000"
+                                android:textSize="18sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -111,6 +113,7 @@
                                 android:layout_marginTop="55dp"
                                 android:text="Price:"
                                 android:textColor="#000000"
+                                android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
 
@@ -125,12 +128,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginLeft="5dp"
-                                android:layout_marginTop="5dp"
+                                android:layout_marginTop="7dp"
                                 android:layout_marginEnd="2dp"
                                 android:layout_marginRight="2dp"
                                 android:layout_marginBottom="2dp"
                                 android:text="TextView"
-                                android:textColor="#000000" />
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
 
                             <TextView
                                 android:id="@+id/textView2"
@@ -138,12 +142,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginLeft="5dp"
-                                android:layout_marginTop="2dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="2dp"
                                 android:layout_marginRight="2dp"
                                 android:layout_marginBottom="2dp"
                                 android:text="TextView"
-                                android:textColor="#000000" />
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
 
                             <TextView
                                 android:id="@+id/textView9"
@@ -151,11 +156,11 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginLeft="5dp"
-                                android:layout_marginTop="31dp"
+                                android:layout_marginTop="30dp"
                                 android:text="TextView"
-                                android:textColor="#000000" />
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
                         </LinearLayout>
-
 
 
                     </LinearLayout>
@@ -168,11 +173,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#DCFDFFFF"
                 android:orientation="vertical"
                 android:paddingLeft="5dp"
@@ -328,11 +333,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#DCFDFFFF"
                 android:orientation="vertical"
                 android:paddingLeft="5dp"
@@ -489,11 +494,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#DCFDFFFF"
                 android:orientation="vertical"
                 android:paddingLeft="5dp"
