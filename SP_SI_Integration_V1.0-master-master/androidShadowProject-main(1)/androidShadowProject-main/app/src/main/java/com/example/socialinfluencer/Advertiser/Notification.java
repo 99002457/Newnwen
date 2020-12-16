@@ -27,9 +27,13 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class Notification extends Fragment {
+    String sen=" has requested for ";
+    String fsen=" has accepted your invitation for ";
+
     ArrayList<String> name= new ArrayList<>(Arrays.asList("Campaign Application", "Campaign Application","Campaign Application","Campaign Application","Campaign Application","Campaign Application"));
-    ArrayList<String> influencer= new ArrayList<>(Arrays.asList("Clay","Ankitha","Girish","Sudarshana","Chethan","Thrinath"));
     ArrayList<String> campaign= new ArrayList<>(Arrays.asList("Sports Zone","Cannie Crew","Good Looks","Wood Bling","Creative Tree","Magic Brush"));
+    ArrayList<String> influencer= new ArrayList<>(Arrays.asList("Clay"+sen+campaign.get(0),"Ankitha"+sen+campaign.get(1),"Girish"+sen+campaign.get(2),"Sudarshana"+sen+campaign.get(3),"Chethan"+sen+campaign.get(4),"Thrinath"+sen+campaign.get(5)));
+
     ArrayList<String> price= new ArrayList<>(Arrays.asList("44331","43422","55444","33793","27949","72223"));
     ArrayList<String> time= new ArrayList<>(Arrays.asList("9","7","3","4","10","15"));
 
@@ -39,8 +43,9 @@ public class Notification extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     ArrayList<String> namE= new ArrayList<>(Arrays.asList("Campaign Acceptance", "Campaign Acceptance","Campaign Acceptance","Campaign Acceptance","Campaign Acceptance","Campaign Acceptance"));
-    ArrayList<String> influenceR= new ArrayList<>(Arrays.asList("Clay","Ankitha","Girish","Sudarshana","Chethan","Thrinath"));
     ArrayList<String> campaigN= new ArrayList<>(Arrays.asList("Cannie Crew","Good Looks","Wood Bling","Sports Zone","Creative Tree","Magic Brush"));
+    ArrayList<String> influenceR= new ArrayList<>(Arrays.asList("Clay"+fsen+campaigN.get(0),"Ankitha"+fsen+campaigN.get(1),"Girish"+fsen+campaigN.get(2),"Sudarshana"+fsen+campaigN.get(3),"Chethan"+fsen+campaigN.get(4),"Thrinath"+fsen+campaigN.get(5)));
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -63,11 +68,11 @@ public class Notification extends Fragment {
 
         //itemClassList.add(new ItemClass(card,"Campaign Acceptance"));
         //itemClassList.add(new ItemClass(card1, "Campaign Application"));
-        itemClassList.add(new ItemClass(ItemClass.card,name,influencer,campaign,price,time));
-        itemClassList.add(new ItemClass(ItemClass.card1,namE,influenceR,campaigN));
-        itemClassList.add(new ItemClass(ItemClass.card1,namE,influenceR,campaigN));
-        itemClassList.add(new ItemClass(ItemClass.card1,namE,influenceR,campaigN));
-        itemClassList.add(new ItemClass(ItemClass.card,name,influencer,campaign,price,time));
+        itemClassList.add(new ItemClass(ItemClass.card,name,influencer,price,time));
+        itemClassList.add(new ItemClass(ItemClass.card1,namE,influenceR));
+        itemClassList.add(new ItemClass(ItemClass.card1,namE,influenceR));
+        itemClassList.add(new ItemClass(ItemClass.card1,namE,influenceR));
+        itemClassList.add(new ItemClass(ItemClass.card,name,influencer,price,time));
 
         CustomNotificationAdapter customeAdapter =new CustomNotificationAdapter(itemClassList);
         campaignList.setAdapter(customeAdapter);
