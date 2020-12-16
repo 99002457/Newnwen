@@ -13,31 +13,17 @@ public class ItemClass {
 
         ArrayList<String> aName;
         ArrayList<String> aInfluencer;
-        ArrayList<String> aCampaign;
+       // ArrayList<String> aCampaign;
         ArrayList<String> aPrice;
         ArrayList<String> aTime;
         Context context;
 
-//    public ItemClass(int viewType, ArrayList<String> aName, ArrayList<String> aInfluencer, ArrayList<String> aCampaign, ArrayList<String> aPrice, ArrayList<String> aTime, android.content.Context context, ArrayList<String> bName, ArrayList<String> bInfluencer, ArrayList<String> bCampaign, android.content.Context context1) {
-//        this.viewType = viewType;
-//        this.aName = aName;
-//        this.aInfluencer = aInfluencer;
-//        this.aCampaign = aCampaign;
-//        this.aPrice = aPrice;
-//        this.aTime = aTime;
-//        this.context = context;
-//        this.bName = bName;
-//        this.bInfluencer = bInfluencer;
-//        this.bCampaign = bCampaign;
-//        Context = context1;
-//    }
 
-
-        public ItemClass(int viewType, ArrayList<String> cName, ArrayList<String> cInfluencer, ArrayList<String> cCampaign, ArrayList<String> cPrice, ArrayList<String> cTime)
+        public ItemClass(int viewType, ArrayList<String> cName, ArrayList<String> cInfluencer, ArrayList<String> cPrice, ArrayList<String> cTime)
         { this.viewType = viewType;
             this.aName = cName;
             this.aInfluencer= cInfluencer;
-            this.aCampaign = cCampaign;
+            //this.aCampaign = cCampaign;
             this.aPrice = cPrice;
             this.aTime = cTime;
            // this.context = context;
@@ -71,13 +57,13 @@ public class ItemClass {
         this.aInfluencer = aInfluencer;
     }
 
-    public ArrayList<String> getaCampaign() {
-        return aCampaign;
-    }
-
-    public void setaCampaign(ArrayList<String> aCampaign) {
-        this.aCampaign = aCampaign;
-    }
+//    public ArrayList<String> getaCampaign() {
+//        return aCampaign;
+//    }
+//
+//    public void setaCampaign(ArrayList<String> aCampaign) {
+//        this.aCampaign = aCampaign;
+//    }
 
     public ArrayList<String> getaPrice() {
         return aPrice;
@@ -119,13 +105,13 @@ public class ItemClass {
         this.bInfluencer = bInfluencer;
     }
 
-    public ArrayList<String> getbCampaign() {
-        return bCampaign;
-    }
-
-    public void setbCampaign(ArrayList<String> bCampaign) {
-        this.bCampaign = bCampaign;
-    }
+//    public ArrayList<String> getbCampaign() {
+//        return bCampaign;
+//    }
+//
+//    public void setbCampaign(ArrayList<String> bCampaign) {
+//        this.bCampaign = bCampaign;
+//    }
 //        public ArrayList<String> getText() { return aName; }
 //        public ArrayList<String> getText_1() { return aInfluencer; }
 //        public ArrayList<String> getText_2() { return aCampaign; }
@@ -143,14 +129,14 @@ public class ItemClass {
     // Variables for the item of second layout
         ArrayList<String> bName;
         ArrayList<String> bInfluencer;
-        ArrayList<String> bCampaign;
+       // ArrayList<String> bCampaign;
         Context Context;
 
-    public ItemClass(int viewType,ArrayList<String> dName, ArrayList<String> dInfluencer, ArrayList<String> dCampaign)
+    public ItemClass(int viewType,ArrayList<String> dName, ArrayList<String> dInfluencer)
     {this.viewType = viewType;
         this.bName = dName;
         this.bInfluencer= dInfluencer;
-        this.bCampaign = dCampaign;
+       // this.bCampaign = dCampaign;
        // this.Context =Context;
     }
 
